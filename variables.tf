@@ -1,17 +1,38 @@
-variable "region" {
-  description = "AWS region"
+variable "ec2-image" {
+  description = "AMI used for EC2 instance"
   type = string
-  default = "eu-central-1" 
 }
 
-variable "path" {
-  description = "Path to Terrafrom state file"
+variable "ec2-flavor" {
+  description = "EC2 instance type"
   type = string
-  default = "./terraform.tfstate" 
 }
 
-variable "ttl" {
-  description = "Time To Live"
+variable "s3-bucket-name" {
+  description = "S3 bucket name"
   type = string
-  default = "1" 
+}
+
+variable "s3-block-public_acls" {
+  description = "Whether Amazon S3 should block public ACLs for this bucket"
+  type = bool
+  default = false
+}
+
+variable "s3-block-public_policy" {
+  description = "Whether Amazon S3 should block public bucket policies for this bucket"
+  type = bool
+  default = false
+}
+
+variable "s3-ignore-public_acls" {
+  description = "Whether Amazon S3 should ignore public ACLs for this bucket"
+  type = bool
+  default = false
+}
+
+variable "s3-restrict-public_buckets" {
+  description = "Whether Amazon S3 should restrict public bucket policies for this bucket"
+  type = bool
+  default = false
 }
