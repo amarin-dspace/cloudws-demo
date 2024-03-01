@@ -7,7 +7,7 @@ ec2-image = "ami-0a23a9827c6dab833"
 ec2-flavor = "t2.micro"
 
 # S3 bucket name
-s3-bucket-name = "wsdemo-s3"
+s3-bucket-name = "change-me"
 
 # Whether Amazon S3 should block public ACLs for this bucket
 s3-block-public_acls = true

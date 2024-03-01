@@ -9,7 +9,7 @@ variable "ec2-flavor" {
 }
 
 variable "s3-bucket-name" {
-  description = "S3 bucket name"
+  description = "S3 bucket name; globally unique"
   type = string
 }
 

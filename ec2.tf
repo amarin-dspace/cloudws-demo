@@ -7,5 +7,10 @@ resource "aws_instance" "example_server" {
   tags = {
     Name = "WS-Demo"
   }
+
+  timeouts {
+    create = "3m"
+    delete = "3m"
+  }
 }
 

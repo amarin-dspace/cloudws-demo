@@ -1,5 +1,5 @@
 provider "aws" {
-  profile = "wtc-development"
+  profile = "cloud-deployment-training"
   region  = "eu-central-1"
 }
 
