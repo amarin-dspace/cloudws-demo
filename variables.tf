@@ -1,9 +1,3 @@
-variable "name" {
-  description = "Name of object"
-  type = string
-  default = "dynamic-aws-creds-operator" 
-}
-
 variable "region" {
   description = "AWS region"
   type = string
@@ -13,7 +7,7 @@ variable "region" {
 variable "path" {
   description = "Path to Terrafrom state file"
   type = string
-  default = "../vault-admin-workspace/terraform.tfstate" 
+  default = "./terraform.tfstate" 
 }
 
 variable "ttl" {

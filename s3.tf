@@ -3,11 +3,12 @@ resource "aws_s3_bucket" "example-bucket" {
    acl = "private"  
 }
 
-resource "aws_s3_bucket_object" "object1" {
-  for_each = fileset("uploads/", "*")
-  bucket = aws_s3_bucket.example-bucket.id
-  key = each.value
-  source = "uploads/${each.value}"
+# Uncomment if you want to upload files to S3 bucket using TF
+#resource "aws_s3_bucket_object" "object1" {
+#  for_each = fileset("uploads/", "*")
+#  bucket = aws_s3_bucket.example-bucket.id
+#  key = each.value
+#  source = "uploads/${each.value}"
 }
 
 resource "aws_s3_bucket_public_access_block" "app" {
