@@ -1,6 +1,5 @@
 resource "aws_s3_bucket" "example" {
    bucket = "wsdemo-s3"
-   acl = "private"  
 }
 
 resource "aws_s3_bucket_ownership_controls" "ownership" {
@@ -30,5 +29,5 @@ resource "aws_s3_bucket_public_access_block" "demo" {
 #  bucket = aws_s3_bucket.example-bucket.id
 #  key = each.value
 #  source = "uploads/${each.value}"
-}
+#}
 
