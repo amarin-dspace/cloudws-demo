@@ -1,7 +1,9 @@
+# https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket
 resource "aws_s3_bucket" "example" {
    bucket = "wsdemo-s3"
 }
 
+# https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_ownership_controls
 resource "aws_s3_bucket_ownership_controls" "ownership" {
   bucket = aws_s3_bucket.example.id
   rule {
@@ -9,12 +11,14 @@ resource "aws_s3_bucket_ownership_controls" "ownership" {
   }
 }
 
+# https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_acl
 resource "aws_s3_bucket_acl" "acl" {
   depends_on = [aws_s3_bucket_ownership_controls.ownership]
   bucket = aws_s3_bucket.example.id
   acl    = "private"
 }
 
+# https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_public_access_block
 resource "aws_s3_bucket_public_access_block" "demo" {
   bucket = aws_s3_bucket.example.id
   block_public_acls       = true
@@ -23,7 +27,7 @@ resource "aws_s3_bucket_public_access_block" "demo" {
   restrict_public_buckets = true
 }
 
-# Uncomment if you want to upload files to S3 bucket using TF
+# Uncomment lines below if you want to upload files to S3 bucket using TF
 #resource "aws_s3_bucket_object" "object1" {
 #  for_each = fileset("uploads/", "*")
 #  bucket = aws_s3_bucket.example-bucket.id
