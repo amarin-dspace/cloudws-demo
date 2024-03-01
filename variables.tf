@@ -36,3 +36,4 @@ variable "s3-restrict-public_buckets" {
   type = bool
   default = false
 }
+

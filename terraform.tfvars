@@ -20,3 +20,4 @@ s3-ignore-public_acls = true
 
 # Whether Amazon S3 should restrict public bucket policies for this bucket
 s3-restrict-public_buckets = true
+

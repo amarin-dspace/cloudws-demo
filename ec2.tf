@@ -8,3 +8,4 @@ resource "aws_instance" "example_server" {
     Name = "WS-Demo"
   }
 }
+
