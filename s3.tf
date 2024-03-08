@@ -35,7 +35,7 @@ resource "aws_s3_bucket_public_access_block" "demo" {
 # Uncomment lines below if you want to upload files to S3 bucket using TF
 #resource "aws_s3_bucket_object" "object1" {
 #  for_each = fileset("uploads/", "*")
-#  bucket = aws_s3_bucket.example-bucket.id
+#  bucket = aws_s3_bucket.example.id
 #  key = each.value
 #  source = "uploads/${each.value}"
 #}
