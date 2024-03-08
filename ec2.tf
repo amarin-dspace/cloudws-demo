@@ -6,6 +6,7 @@ resource "aws_instance" "example_server" {
 
   tags = {
     Name = "WS-Demo"
+    Team = "change_me"
   }
 
   timeouts {
