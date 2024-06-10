@@ -1,3 +1,5 @@
+# Edit to your liking.
+
 variable "ec2-image" {
   description = "AMI used for EC2 instance"
   type = string
